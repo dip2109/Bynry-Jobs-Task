@@ -55,7 +55,6 @@ ProfileMapProject/
 │       ├── 3.jpg
 │       ├── 4.jpg
 │       ├── 5.jpg
-│       └── placeholder.jpg
 ├── package.json
 ├── tailwind.config.js
 └── vite.config.js

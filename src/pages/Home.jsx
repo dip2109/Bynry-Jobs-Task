@@ -1,57 +1,3 @@
-// import React, { useState } from 'react';
-// import { useProfiles } from '../context/ProfileContext';
-// import ProfileCard from '../components/ProfileCard';
-// import ProfileMap from '../components/ProfileMap';
-// import SearchBar from '../components/SearchBar';
-
-// const Home = () => {
-//   const { profiles } = useProfiles();
-//   const [selectedProfile, setSelectedProfile] = useState(null);
-//   const [filters, setFilters] = useState({
-//     name: '',
-//     location: '',
-//     interests: ''
-//   });
-
-//   const filteredProfiles = profiles.filter(profile => {
-//     const nameMatch = profile.name.toLowerCase().includes(filters.name.toLowerCase());
-//     const locationMatch = profile.address.toLowerCase().includes(filters.location.toLowerCase());
-//     const interestsMatch = filters.interests === '' || 
-//       profile.interests.some(interest => 
-//         interest.toLowerCase().includes(filters.interests.toLowerCase())
-//       );
-
-//     return nameMatch && locationMatch && interestsMatch;
-//   });
-
-//   return (
-//     <div className="p-4">
-//       <h1 className="text-2xl font-bold mb-4">Profile Explorer</h1>
-//       <SearchBar filters={filters} setFilters={setFilters} />
-//       <div className="flex flex-wrap">
-//         {filteredProfiles.map(profile => (
-//           <ProfileCard 
-//             key={profile.id} 
-//             profile={profile} 
-//             onSummaryClick={setSelectedProfile} 
-//           />
-//         ))}
-//       </div>
-//       {selectedProfile && (
-//         <ProfileMap
-//           lat={selectedProfile.lat}
-//           lng={selectedProfile.lng}
-//           name={selectedProfile.name}
-//         />
-//       )}
-//     </div>
-//   );
-// };
-
-// export default Home;
-
-
-
 import React, { useState } from 'react';
 import { useProfiles } from '../context/ProfileContext';
 import ProfileCard from '../components/ProfileCard';
@@ -75,28 +21,35 @@ const Home = () => {
   });
 
   return (
-    <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Profile Explorer</h1>
-      <SearchBar 
-        searchQuery={searchQuery} 
-        setSearchQuery={setSearchQuery} 
-      />
-      <div className="flex flex-wrap gap-4">
-        {filteredProfiles.map(profile => (
-          <ProfileCard 
-            key={profile.id} 
-            profile={profile} 
-            onSummaryClick={setSelectedProfile} 
-          />
-        ))}
-      </div>
-      {selectedProfile && (
-        <ProfileMap
-          lat={selectedProfile.lat}
-          lng={selectedProfile.lng}
-          name={selectedProfile.name}
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">Profile Explorer</h1>
+        
+        <SearchBar 
+          searchQuery={searchQuery} 
+          setSearchQuery={setSearchQuery} 
         />
-      )}
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredProfiles.map(profile => (
+            <ProfileCard 
+              key={profile.id} 
+              profile={profile} 
+              onSummaryClick={setSelectedProfile} 
+            />
+          ))}
+        </div>
+
+        {selectedProfile && (
+          <div className="mt-8 bg-white rounded-lg shadow-lg p-6">
+            <ProfileMap
+              lat={selectedProfile.lat}
+              lng={selectedProfile.lng}
+              name={selectedProfile.name}
+            />
+          </div>
+        )}
+      </div>
     </div>
   );
 };

@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "name": "Aarav Sharma",
+    "photo": "/assets/3.jpg",
+    "description": "Frontend Developer based in Kothrud, Pune.",
+    "address": "Kothrud, Pune, Maharashtra, India",
+    "lat": 18.5074,
+    "lng": 73.8077,
+    "contact": "aarav.sharma@example.com",
+    "interests": ["React", "Photography", "Traveling"]
+  },
+  {
+    "id": 2,
+    "name": "Priya Deshmukh",
+    "photo": "/assets/1.jpg",
+    "description": "UI/UX Designer from Hinjewadi, Pune.",
+    "address": "Hinjewadi, Pune, Maharashtra, India",
+    "lat": 18.5913,
+    "lng": 73.7384,
+    "contact": "priya.deshmukh@example.com",
+    "interests": ["Design", "Sketching", "Music"]
+  },
+  {
+    "id": 3,
+    "name": "Rohan Patil",
+    "photo": "/assets/4.jpg",
+    "description": "Full Stack Engineer living in Baner.",
+    "address": "Baner, Pune, Maharashtra, India",
+    "lat": 18.5590,
+    "lng": 73.7864,
+    "contact": "rohan.patil@example.com",
+    "interests": ["Node.js", "Gaming", "Cycling"]
+  },
+  {
+    "id": 4,
+    "name": "Sneha Kulkarni",
+    "photo": "/assets/2.jpg",
+    "description": "Data Scientist residing in Viman Nagar.",
+    "address": "Viman Nagar, Pune, Maharashtra, India",
+    "lat": 18.5679,
+    "lng": 73.9143,
+    "contact": "sneha.kulkarni@example.com",
+    "interests": ["Python", "AI", "Yoga"]
+  },
+  {
+    "id": 5,
+    "name": "Manav Joshi",
+    "photo": "/assets/5.jpg",
+    "description": "Backend Developer working in Magarpatta City.",
+    "address": "Magarpatta City, Pune, Maharashtra, India",
+    "lat": 18.5184,
+    "lng": 73.9311,
+    "contact": "manav.joshi@example.com",
+    "interests": ["Java", "Cricket", "Reading"]
+  }
+]
